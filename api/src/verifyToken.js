@@ -1,18 +1,6 @@
-import {Request, Response, NextFunction} from 'express'
 const jwt = require('jsonwebtoken')
 
-interface IUser {
-    id: string,
-    isAdmin: boolean,
-    iat: number,
-    exp: number
-}
-
-interface IReqUser extends Request {
-    user: IUser
-}
-
-function verify(req: IReqUser, res: Response, next: NextFunction) {
+function verify(req, res, next) {
     const authHeader = req.headers.authorization
     if (!authHeader) return res.status(401).json('You are not authenticated!')
 
@@ -20,7 +8,7 @@ function verify(req: IReqUser, res: Response, next: NextFunction) {
     jwt.verify(
         token,
         process.env.SECRET_KEY,
-        (err: Error, user: IUser) => {
+        (err, user) => {
             if (err) return res.status(403).json('Token is not valid!')
             req.user = user
             next()

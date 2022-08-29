@@ -1,14 +1,11 @@
-import {Request, Response, Router} from 'express'
-
-// const router = require('express').Router()
+const router = require('express').Router()
 const CryptoJS = require("crypto-js")
 const jwt = require('jsonwebtoken')
 
 const User = require('../models/User')
 
 //REGISTER
-// router.post('/register', async (req: Request, res: Response) => {
-export const register = Router().post('/register', async (req: Request, res: Response) => {
+router.post('/register', async (req, res) => {
     const key = process.env.SECRET_KEY
     const {username, email, password, status, profilePic, isAdmin} = req.body
 
@@ -33,8 +30,7 @@ export const register = Router().post('/register', async (req: Request, res: Res
 })
 
 //LOGIN
-// router.post('/login', async (req: Request, res: Response) => {
-export const login = Router().post('/login', async (req: Request, res: Response) => {
+router.post('/login', async (req, res) => {
     const key = process.env.SECRET_KEY
     const {email} = req.body
 
@@ -60,4 +56,4 @@ export const login = Router().post('/login', async (req: Request, res: Response)
     }
 })
 
-// module.exports = router
+module.exports = router
