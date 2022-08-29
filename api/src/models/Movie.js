@@ -1,4 +1,3 @@
-import { Schema } from 'mongoose'
 const mongoose = require('mongoose')
 
 const MovieSchema = new mongoose.Schema({
