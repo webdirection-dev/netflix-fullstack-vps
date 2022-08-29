@@ -11,4 +11,4 @@
 - Firebase
 - crypto-js
 
-[DEMO](https://netflix-mern-ts.vercel.app)
+[DEMO](https://netflix-mern-ts.vercel)
