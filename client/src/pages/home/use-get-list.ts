@@ -10,7 +10,9 @@ export const useGetList = (
     const [lists, setLists] = useState([]);
     const [homeLists, setHomeLists] = useState([]);
 
-    const genre = type === 'movies' ? genreMoviesList : genreSeriesList;
+    const genre =
+        type === 'movies' ? genreMoviesList :
+        type === 'series' ? genreSeriesList : '';
 
     useEffect(() => {
         const getRandomList = async () => {

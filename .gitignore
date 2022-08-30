@@ -6,6 +6,10 @@
 
 # production
 /build
+/api/build
+/admin/build
+/client/build
+
 /idea
 /.idea
 .vscode
