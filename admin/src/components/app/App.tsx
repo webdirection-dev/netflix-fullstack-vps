@@ -12,11 +12,7 @@ import { useChangeTheme } from './use-change-theme';
 import { AuthContext } from '../../context/authContext/AuthContext';
 
 import { useAppDispatch } from '../../hooks/hookRedux';
-import {
-    loadUsers,
-    loadStats,
-    sortUsersByNew,
-} from '../../features/users/users-slice';
+import {loadUsers, loadStats, sortUsersByNew,} from '../../features/users/users-slice';
 import { loadMovies } from '../../features/movies/movies-slice';
 import { loadMoviesLists } from '../../features/lists/movies-list-slice';
 

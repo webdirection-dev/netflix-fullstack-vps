@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
+import {axiosInstance as axios} from "../../store";
 
 export const useGetList = (
     type?: string,

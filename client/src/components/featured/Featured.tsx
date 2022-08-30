@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { InfoOutlined, PlayArrow } from '@mui/icons-material';
-import axios from 'axios';
+// import axios from 'axios';
+import {axiosInstance as axios} from "../../store";
 
 import { IMovieInfo } from '../../types';
 import './featured.scss';

@@ -1,5 +1,4 @@
-import axios from "axios"
-
+import {axiosInstance as axios} from "../store";
 import {loginFailure, loginStart, loginSuccess} from "./authContext/AuthActions"
 
 import {TAuthDispatch} from "../types/apiTypes"
