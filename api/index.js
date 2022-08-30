@@ -26,7 +26,11 @@ app.listen(8800, () => {
     console.log('Backend server is running!!!')
 })
 
-app.use(cors())
+app.use(cors({
+    origin: 'https://webdirection.org',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,
+}))
 app.use(express.json())
 
 app.use('/api/auth', authRoute)
