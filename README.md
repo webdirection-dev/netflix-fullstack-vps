@@ -1,5 +1,6 @@
 # Netflix API
 
+- VPS
 - TypeScript
 - MongoDB
 - ExpressJS
