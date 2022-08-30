@@ -11,4 +11,4 @@
 - Firebase
 - crypto-js
 
-[DEMO](https://netflix-mern-ts.vercel)
+[DEMO](http://62.113.108.250/)
