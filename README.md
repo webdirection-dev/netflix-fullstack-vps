@@ -12,4 +12,4 @@
 - Firebase
 - crypto-js
 
-[DEMO](http://62.113.108.250/)
+[DEMO](http://webdirection.org)

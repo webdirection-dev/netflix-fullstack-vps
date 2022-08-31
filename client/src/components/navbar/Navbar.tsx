@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './navbar.scss';
 
@@ -6,11 +6,10 @@ import logo from '../../img/logo.png';
 import avatar from '../../img/avatar.jpeg';
 import { Search, Notifications, ArrowDropDown } from '@mui/icons-material';
 
-import { useAppDispatch, useAppSelector } from '../../store';
-import { logout, selectAuthUser } from '../../features/auth/auth_slice';
+import { useAppDispatch } from '../../store';
+import { logout } from '../../features/auth/auth_slice';
 
 const Navbar: React.FC = () => {
-    const authUser = useAppSelector((state) => selectAuthUser(state));
     const dispatch = useAppDispatch();
     const navigate = useNavigate();
     const [isScrolled, setIsScrolled] = useState(false);
@@ -50,15 +49,12 @@ const Navbar: React.FC = () => {
                     <span>KID</span>
                     <Notifications className='icon' />
                     <img src={avatar} alt='avatar' />
-                    {/* <img
-                        src={authUser ? authUser.profilePic : ''}
-                        alt='avatar'
-                    /> */}
 
                     <div className='profile'>
                         <ArrowDropDown className='icon' />
 
                         <div className='options'>
+                            <a href='http://admin.webdirection.org'>Admin Panel</a>
                             <span>Settings</span>
                             <span onClick={handleLogout}>Logout</span>
                         </div>

@@ -76,7 +76,10 @@
                     }
                 }
 
-                span {
+                span, a{
+                    white-space: nowrap;
+                    text-decoration: none;
+                    color: white;
                     padding: 10px;
                     cursor: pointer;
                 }

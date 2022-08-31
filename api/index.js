@@ -27,7 +27,7 @@ app.listen(8800, () => {
 })
 
 app.use(cors({
-    origin: 'https://webdirection.org',
+    origin: '*',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
 }))
