@@ -75,6 +75,8 @@ const authSlice = createSlice({
     initialState,
     reducers: {
         logout(state) {
+            state.status = 'received';
+            state.error = null;
             state.user = null;
             localStorage.setItem('user', JSON.stringify(null));
         },
@@ -89,12 +91,11 @@ const authSlice = createSlice({
                 state.user = action.payload;
             })
 
-            // .addCase(registerUser.fulfilled, (state, action) => {
-            //     localStorage.setItem('user', JSON.stringify(action.payload));
+            .addCase(registerUser.fulfilled, (state, action) => {
+                localStorage.setItem('user', JSON.stringify(action.payload));
 
-            //     state.status = 'received';
-            //     state.user = action.payload;
-            // })
+                state.status = 'received';
+            })
 
             .addMatcher(isPending, (state, action: PayloadAction<string>) => {
                 state.error = null;
