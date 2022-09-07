@@ -1,4 +1,4 @@
-# Netflix API
+# Netflix
 
 - VPS Beget
 - TypeScript
