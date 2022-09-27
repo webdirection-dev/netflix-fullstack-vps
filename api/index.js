@@ -14,7 +14,8 @@ const listRoute = require('./src/routes/lists')
 dotenv.config()
 
 //MONGODB
-mongoose.connect(process.env.MONGO_URL, {
+mongoose
+    .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
@@ -26,11 +27,14 @@ app.listen(8800, () => {
     console.log('Backend server is running!!!')
 })
 
-app.use(cors({
-    origin: '*',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true,
-}))
+app.use(cors())
+
+// app.use(cors({
+//     origin: '*',
+//     methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//     credentials: true,
+// }))
+
 app.use(express.json())
 
 app.use('/api/auth', authRoute)
