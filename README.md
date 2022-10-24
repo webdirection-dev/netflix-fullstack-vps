@@ -11,6 +11,6 @@
 - JWT
 - Firebase
 - crypto-js
-- 
+
 
 [DEMO](http://webdirection.org)

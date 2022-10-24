@@ -17,7 +17,7 @@ const Sidebar: FC<IAside> = ({setDark, dark}) => {
     return(
         <aside className='sidebar'>
             <div className="top">
-                <a href='https://ntx.apget.ru' className="logo">My Netflix</a>
+                <a href='https://ntflx.apwdev.online' className="logo">My Netflix</a>
             </div>
 
             <hr/>
