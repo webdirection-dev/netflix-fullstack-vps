@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
                         <ArrowDropDown className='icon' />
 
                         <div className='options'>
-                            <a href='https://admin.ntflx.apwdev.online'>Admin Panel</a>
+                            <a href='https://admin.demo1.apwpro.ru'>Admin Panel</a>
                             <span>Settings</span>
                             <span onClick={handleLogout}>Logout</span>
                         </div>

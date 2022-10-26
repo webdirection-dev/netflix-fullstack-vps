@@ -35,7 +35,7 @@ const Login: React.FC = () => {
         <div className='login'>
             <div className='top'>
                 <div className='wrapper'>
-                    <img className='logo' src={logo} alt='logo' />
+                    {/*<img className='logo' src={logo} alt='logo' />*/}
                 </div>
             </div>
 
