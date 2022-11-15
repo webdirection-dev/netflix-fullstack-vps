@@ -18,7 +18,7 @@ export const loginCall = async (user: ILoginCall, dispatch: TAuthDispatch) => {
             }
         )
 
-        if (dispatch && res.data.isAdmin) dispatch(loginSuccess(res.data))
+        if (dispatch) dispatch(loginSuccess(res.data))
     } catch (err) {
         if (dispatch) dispatch(loginFailure())
         console.error(err)
