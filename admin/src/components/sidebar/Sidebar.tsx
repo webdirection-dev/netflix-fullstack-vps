@@ -1,33 +1,33 @@
-import React, {Dispatch, SetStateAction, FC} from "react"
+import React, { Dispatch, SetStateAction, FC } from "react"
 import './sidebar.scss'
 
 import SidebarItem from "./SidebarItem"
 
-import {sidebarData} from "../../static-data/data/sidebar-data"
-import {useLocation} from "react-router-dom";
+import { sidebarData } from "../../static-data/data/sidebar-data"
+import { useLocation } from "react-router-dom"
 
 interface IAside {
-    setDark: Dispatch<SetStateAction<boolean>>;
+    setDark: Dispatch<SetStateAction<boolean>>
     dark: boolean
 }
 
-const Sidebar: FC<IAside> = ({setDark, dark}) => {
-    const {pathname} = useLocation()
+const Sidebar: FC<IAside> = ({ setDark, dark }) => {
+    const { pathname } = useLocation()
 
-    return(
+    return (
         <aside className='sidebar'>
             <div className="top">
-                <a href='https://demo1.apwpro.ru' className="logo">My Netflix</a>
+                <a href='https://demo1.apwdev.ru' className="logo">My Netflix</a>
             </div>
 
-            <hr/>
+            <hr />
 
             <div className="center">
                 <ul>
                     {
                         sidebarData.map((i, index) => {
-                            return(
-                                <SidebarItem key={i.title} index={index} pathname={pathname} {...i}/>
+                            return (
+                                <SidebarItem key={i.title} index={index} pathname={pathname} {...i} />
                             )
                         })
                     }

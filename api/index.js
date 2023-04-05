@@ -15,10 +15,11 @@ dotenv.config()
 
 //MONGODB
 mongoose
+    .set('strictQuery', true)
     .connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    })
     .then(() => console.log('DB Connection Success!'))
     .catch((err) => console.error(err))
 

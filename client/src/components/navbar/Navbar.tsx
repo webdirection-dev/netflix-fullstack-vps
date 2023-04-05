@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import './navbar.scss';
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import './navbar.scss'
 
-import logo from '../../img/logo.png';
-import avatar from '../../img/avatar.jpeg';
-import { Search, Notifications, ArrowDropDown } from '@mui/icons-material';
+import logo from '../../img/logo.png'
+import avatar from '../../img/avatar.jpeg'
+import { Search, Notifications, ArrowDropDown } from '@mui/icons-material'
 
-import { useAppDispatch } from '../../store';
-import { logout } from '../../features/auth/auth_slice';
+import { useAppDispatch } from '../../store'
+import { logout } from '../../features/auth/auth_slice'
 
 const Navbar: React.FC = () => {
-    const dispatch = useAppDispatch();
-    const navigate = useNavigate();
-    const [isScrolled, setIsScrolled] = useState(false);
+    const dispatch = useAppDispatch()
+    const navigate = useNavigate()
+    const [isScrolled, setIsScrolled] = useState(false)
 
     const handleLogout = () => {
-        dispatch(logout());
-        navigate('./login');
-    };
+        dispatch(logout())
+        navigate('./login')
+    }
 
     window.onscroll = () => {
-        setIsScrolled(window.pageYOffset !== 0);
-        return () => (window.onscroll = null);
-    };
+        setIsScrolled(window.pageYOffset !== 0)
+        return () => (window.onscroll = null)
+    }
 
     return (
         <div className={isScrolled ? 'navbar scrolled' : 'navbar'}>
@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
                         <ArrowDropDown className='icon' />
 
                         <div className='options'>
-                            <a href='https://admin.demo1.apwpro.ru'>Admin Panel</a>
+                            <a href='https://admin.demo1.apwdev.ru'>Admin Panel</a>
                             <span>Settings</span>
                             <span onClick={handleLogout}>Logout</span>
                         </div>
@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
                 </div>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default Navbar;
+export default Navbar
